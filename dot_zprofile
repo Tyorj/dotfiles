@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# --- 1. XDG Base Directory Specification (The Foundation) ---
+# This tells compliant apps where to put their config/data/cache.
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# --- 2. Default Applications ---
+# Since you are on Niri/WezTerm:
+export EDITOR="nvim"
+export VISUAL="nvim"
+export TERMINAL="wezterm"
+export BROWSER="zen-browser"
+
+# --- 3. Path Configuration ---
+export PATH="$HOME/.local/bin:$XDG_DATA_HOME/cargo/bin:$PATH"
+
+# --- 4. "Clean Home" Variables ---
+# These force specific apps to use XDG dirs instead of dumping files in ~
+
+# Python (Essential for CS/AI work)
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+
+# Rust / Cargo
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+# Go 
+export GOPATH="$XDG_DATA_HOME/go"
+
+# GnuPG
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+# --- 5. Manpager (Quality of Life) ---
+# Makes 'man' pages colorful and easier to read without installing extra tools.
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
