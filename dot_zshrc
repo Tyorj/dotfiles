@@ -1,26 +1,34 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+# --- Powerlevel10k Instant Prompt (MUST BE AT THE TOP) ---
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt extendedglob nomatch
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/tyorj/.zshrc'
+# --- Setup Variables ---
+ZCONF="$HOME/.config/zsh"
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-#
-# Manual add
-source ~/.config/zsh/plugins/powerlevel10kgit/powerlevel10k.zsh-theme
+# --- Core Modules ---
+source "$ZCONF/options.zsh"     
+source "$ZCONF/history.zsh"     
+source "$ZCONF/completion.zsh" 
+source "$ZCONF/bindings.zsh"
+
+source "$ZCONF/aliases.zsh"  
+
+# --- Plugins ---
+if [[ -f "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+    source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+
+if [[ -f "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+    source "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
+# --- Theme ---
+source "$ZCONF/plugins/powerlevel10kgit/powerlevel10k.zsh-theme"
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f "$ZCONF/.p10k.zsh" ]] || source "$ZCONF/.p10k.zsh"
