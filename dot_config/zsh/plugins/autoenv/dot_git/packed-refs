@@ -1,0 +1,21 @@
+# pack-refs with: peeled fully-peeled sorted 
+33bcffea9e73fa31b6165c79fd0453c6735d75be refs/remotes/origin/add-shelltest
+5dc43457f8b32812cd7bad56408de53e77b8fe93 refs/remotes/origin/develop-2.2
+5d1666788531a888bdfa728f6253ba1c50602352 refs/remotes/origin/hyperupcall-aliasfuncdef
+6c562be42048cbe864b7d5a8d72aa9ff736196c3 refs/remotes/origin/hyperupcall-eval
+c58a4942ba608f2ecbeac57c0553eb5a015c72ef refs/remotes/origin/hyperupcall-final
+640e970a179bad8c50a695c258b7a506bfda7e6a refs/remotes/origin/hyperupcall-readmecodefix
+3788e69ce68afda2ed0758d8025111c076a0a8ce refs/remotes/origin/hyperupcall-reset-autoenv-viewer-default
+6a320bc19e67ed7327156460c35df80dfba020ef refs/remotes/origin/hyperupcall-revert-cd
+8f643c762c2e5c671ff9027824a4d7c2399b78e1 refs/remotes/origin/hyperupcall-u
+9d1430e62bee71c8bb6d5a47012ece1719a9b93f refs/remotes/origin/hyperupcall-v0.4.0
+e7c814614b68ba7b156256cfba94645b0be8e6e5 refs/remotes/origin/main
+0c6a4c6ef389c490bf0179de66e216d0ca909ec9 refs/remotes/origin/master
+0d74b8fa42be62221beabcb88fee5d817cf21372 refs/tags/v0.0.1
+965dfb41786f05b0afa1f2e965f2a1d85a78e202 refs/tags/v0.1.0
+16359a875163368d277dad2ba311f0c6131463e6 refs/tags/v0.2.0
+92d2f3b375cd1a4a7ba6bec84300bd5d60b086dd refs/tags/v0.2.1
+7172b5ca62b29f7ff25746d677af6921f425ec21 refs/tags/v0.3.0
+^025e52fbf033cc094943febec71e2ad81a5de84f
+3f2e9435143b1cb5a28182f70743bb3bca03e114 refs/tags/v0.4.0
+^11ab75f38b14cb3b7b443399e83947347c7445cc

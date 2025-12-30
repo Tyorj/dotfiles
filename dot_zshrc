@@ -7,24 +7,21 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # --- Setup Variables ---
-ZCONF="$HOME/.config/zsh"
+ZCONF="$HOME/.config/zsh"  
 
 # --- Core Modules ---
 source "$ZCONF/options.zsh"     
-source "$ZCONF/history.zsh"     
 source "$ZCONF/completion.zsh" 
-source "$ZCONF/bindings.zsh"
+source "$ZCONF/bindings.zsh" 
+source "$ZCONF/plugins.zsh" 
 
 source "$ZCONF/aliases.zsh"  
 
 # --- Plugins ---
-if [[ -f "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
-    source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-fi
-
-if [[ -f "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-    source "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-fi
+source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZCONF/plugins/autoenv/activate.sh"
+source <(fzf --zsh)
 
 # --- Theme ---
 source "$ZCONF/plugins/powerlevel10kgit/powerlevel10k.zsh-theme"
@@ -32,3 +29,6 @@ source "$ZCONF/plugins/powerlevel10kgit/powerlevel10k.zsh-theme"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f "$ZCONF/.p10k.zsh" ]] || source "$ZCONF/.p10k.zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
