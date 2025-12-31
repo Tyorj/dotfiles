@@ -1,0 +1,29 @@
+[".config/zsh/plugins/zsh-autosuggestions"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-autosuggestions.git"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]
+
+[".config/zsh/plugins/zsh-syntax-highlighting"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]
+
+[".config/zsh/plugins/powerlevel10kgit"]
+    type = "git-repo"
+    url = "https://github.com/romkatv/powerlevel10k.git"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]
+
+[".config/zsh/plugins/fzf-tab"]
+    type = "git-repo"
+    url = "https://github.com/Aloxaf/fzf-tab"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]
+
+[".config/zsh/plugins/autoenv"]
+    type = "git-repo"
+    url = "https://github.com/hyperupcall/autoenv"
+    refreshPeriod = "168h"
+    clone.args = ["--depth", "1"]

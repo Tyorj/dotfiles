@@ -19,7 +19,7 @@ setopt INTERACTIVE_COMMENTS    # Allow # comments in shell
 # ---  Open buffer line in editor ---
 autoload -Uz edit-command-line
 zle -N edit-command-line
-bindkey '^e' edit-command-line
+bindkey '^xe' edit-command-line
 
 # ---  chpwd Hook  ---
 autoload -Uz add-zsh-hook
