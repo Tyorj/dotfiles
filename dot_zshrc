@@ -11,18 +11,24 @@ ZCONF="$HOME/.config/zsh"
 
 # --- Core Modules ---
 source "$ZCONF/options.zsh"     
-source "$ZCONF/completion.zsh" 
 source "$ZCONF/bindings.zsh" 
-source "$ZCONF/plugins.zsh" 
 
 source "$ZCONF/aliases.zsh"  
 
 # --- Plugins ---
-source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$ZCONF/plugins/autoenv/activate.sh"
-source <(fzf --zsh)
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=184,underline'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=184,underline'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=184'
 
+# source "$ZCONF/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+autoload -U compinit; compinit
+source "$ZCONF/plugins/fzf-tab/fzf-tab.plugin.zsh"
+source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$ZCONF/plugins/autoenv/activate.sh"
+
+source <(fzf --zsh)
+source "$ZCONF/plugins.zsh" 
 # --- Theme ---
 source "$ZCONF/plugins/powerlevel10kgit/powerlevel10k.zsh-theme"
 
@@ -30,5 +36,6 @@ source "$ZCONF/plugins/powerlevel10kgit/powerlevel10k.zsh-theme"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f "$ZCONF/.p10k.zsh" ]] || source "$ZCONF/.p10k.zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+# To customize prompt
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+

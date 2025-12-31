@@ -5,13 +5,14 @@ alias rm="rm -i"              # Confirm before deleting
 alias mkdir="mkdir -p"        # Create parent dirs automatically
 
 # --- 2. Navigation & Listing ---
-# (Later you can replace 'ls' with 'eza' if you install it)
-alias ls="eza --long --icons=auto --color=auto"
+alias es="eza -a --long --icons=auto --color=auto"
 alias c="clear"
 alias ..="cd .."
 alias ...="cd ../.."
 
 # --- 3. Arch Linux Management ---
+alias v="nvim"
+alias sv="sudo nvim"
 
 # --- 4. Git (The Essentials) ---
 # Since we removed OMZ, we manually add the most used ones here.

@@ -25,13 +25,3 @@ bindkey '^H' backward-kill-word
 # Shift + Tab to Undo
 bindkey '^[[Z' undo
 
-# --- 5. Smart History Search ---
-# If you type "git" and press UP, it only shows commands starting with "git"
-# instead of just the previous command.
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-bindkey "^[[A" up-line-or-beginning-search  # Up Arrow
-bindkey "^[[B" down-line-or-beginning-search # Down Arrow
