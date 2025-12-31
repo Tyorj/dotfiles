@@ -22,6 +22,6 @@ bindkey "^[[F"  end-of-line          # End Key
 # (Standard Backspace only deletes one char)
 bindkey '^H' backward-kill-word
 
-# Shift + Tab to Undo
-bindkey '^[[Z' undo
+# Ctrl + z to Undo
+bindkey '^z' undo
 

@@ -36,3 +36,5 @@ alias p10kconf="$EDITOR ~/.config/zsh/p10k.zsh"
 # Reload shell to apply changes immediately
 alias zeload="source ~/.zshrc"
 
+# Suffix Aliases - Open File
+alias -s py='$EDITOR'
