@@ -9,6 +9,9 @@ setopt APPEND_HISTORY          # Append, don't overwrite
 setopt HIST_IGNORE_ALL_DUPS    # Clean history
 setopt SHARE_HISTORY           # Live sync between tabs
 
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
 # --- NAVIGATION (Internal Shell Behavior) ---
 setopt AUTO_CD                 # 'Downloads' -> cd Downloads
 setopt AUTO_PUSHD              # Keep directory stack
