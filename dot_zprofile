@@ -36,5 +36,6 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # --- 5. Manpager (Quality of Life) ---
 # Makes 'man' pages colorful and easier to read without installing extra tools.
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="less -R --use-color -Dd+r -Du+b"
 

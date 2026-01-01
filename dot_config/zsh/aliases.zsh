@@ -38,3 +38,6 @@ alias zeload="source ~/.zshrc"
 
 # Suffix Aliases - Open File
 alias -s py='$EDITOR'
+
+# Bat thingy
+alias lsbc="lsblk | bat -l conf -p"

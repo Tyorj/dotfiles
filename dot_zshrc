@@ -16,19 +16,24 @@ source "$ZCONF/options.zsh"
 source "$ZCONF/aliases.zsh"  
 
 # --- Plugins ---
+source "/usr/share/wikiman/widgets/widget.zsh"
 source "$ZCONF/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=184,underline'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=184,underline'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=184'
 # source "$ZCONF/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 autoload -U compinit; compinit
-source "$ZCONF/plugins/fzf-tab/fzf-tab.plugin.zsh"
-source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$ZCONF/plugins/autoenv/activate.sh"
+_comp_options+=(globdots)
 
 source <(fzf --zsh)
+source "$ZCONF/plugins/fzf-tab/fzf-tab.plugin.zsh"
+source "$ZCONF/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+export AUTOENV_ENABLE_LEAVE=1
+source "$ZCONF/plugins/autoenv/activate.sh"
 
 source "$ZCONF/plugins.zsh" 
+
 # --- Theme ---
 source "$ZCONF/plugins/powerlevel10kgit/powerlevel10k.zsh-theme"
 

@@ -11,7 +11,7 @@ export FZF_DEFAULT_OPTS='
   --color=hl:#d7d787,hl+:#d7d700,info:#afaf87,marker:#d7d75f
   --color=prompt:#d7d700,spinner:#d7d7af,pointer:#d7d700,header:#d7d700
   --color=border:#262626,label:#aeaeae,query:#d7d700
-  --border="sharp" --border-label="" --preview-window="border-sharp" --prompt="> "
+  --border="sharp" --border-label="" --preview-window="right:60%:wrap" --prompt="> "
   --marker=">" --pointer="◆" --separator="─" --scrollbar="│" --layout=reverse
   --preview="if [[ -d {} ]]; then eza -a1 --color=always --icons=always {}; else bat --color=always --style=numbers --line-range :500 {}; fi"'
 # FZF-tab
@@ -20,11 +20,12 @@ export FZT_DEFAULT_OPTS='
   --color=fg:#d0d0d0,fg+:#d0d0d0,bg:#232323,bg+:#3c3836
   --color=hl:#d7d787,hl+:#d7d700,info:#afaf87,marker:#d7d75f
   --color=prompt:#d7d700,spinner:#d7d7af,pointer:#d7d700,header:#d7d700
-  --color=border:#262626,label:#aeaeae,query:#d7d700 '
+  --color=border:#262626,label:#aeaeae,query:#d7d700
+  --preview-window=right:60%
+  --layout=reverse'
+zstyle ':fzf-tab:*' fzf-flags $(echo $FZT_DEFAULT_OPTS)
 
-zstyle ':fzf-tab:*' fzf-flags $(echo $FZT_DEFAULT_OPTS) 
 zstyle ':fzf-tab:complete:*' fzf-preview 'if [[ -d $realpath ]]; then eza -a1 --color=always --icons=always $realpath; else bat --color=always --style=numbers --line-range :500 $realpath; fi'
-zstyle ':fzf-tab:*' fzf-flags --preview-window=right:50%:wrap
 
 # ZSH-AUTOCOMPLETE
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=185,bold,underline"
